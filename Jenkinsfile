@@ -8,12 +8,7 @@ pipeline {
 
     stages {
 
-        stage('Clone') {
-            steps {
-                git 'https://github.com/SourabhAwate11/spring-petclinic-devops.git'
-            }
-        }
-
+        
         stage('Build') {
             steps {
                 sh './mvnw clean package -DskipTests'
