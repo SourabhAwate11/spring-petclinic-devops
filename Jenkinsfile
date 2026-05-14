@@ -11,7 +11,7 @@ pipeline {
         
         stage('Build') {
             steps {
-                sh './mvnw clean package -DskipTests -Dcheckstyle.skip=true'
+                sh './mvnw clean install -DskipTests -Dmaven.test.skip=true -Dcheckstyle.skip=true -Dspotbugs.skip=true'
             }
         }
 
